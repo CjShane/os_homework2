@@ -10,6 +10,7 @@
 public class Matrix {
     private double [][] matrix;
     private double[][] previous;
+    private int iterations;
 
     /**
      * Constructs a Matrix object with an initial grid of temperature values.
