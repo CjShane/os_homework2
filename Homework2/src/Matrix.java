@@ -10,7 +10,6 @@
 public class Matrix {
     private double [][] matrix;
     private double[][] previous;
-    private int iterations;
 
     /**
      * Constructs a Matrix object with an initial grid of temperature values.
@@ -107,5 +106,44 @@ public class Matrix {
             }
         }
         return sum / count;
+    }
+    /**
+     * Returns the number of rows in the matrix.
+     *
+     * @return the row count
+     */
+    public int getRowCount() {
+        return matrix.length;
+    }
+
+    /**
+     * Returns the number of columns in the matrix.
+     *
+     * @return the column count
+     */
+    public int getColCount() {
+        return matrix[0].length;
+    }
+
+    /**
+     * Returns the value at the specified matrix position.
+     *
+     * @param i the row index
+     * @param j the column index
+     * @return the temperature value at (i, j)
+     */
+    public double getValue(int i, int j) {
+        return matrix[i][j];
+    }
+
+    /**
+     * Sets the value at the specified matrix position.
+     *
+     * @param i     the row index
+     * @param j     the column index
+     * @param value the new temperature
+     */
+    public void setValue(int i, int j, double value) {
+        matrix[i][j] = value;
     }
 }
